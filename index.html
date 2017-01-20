@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<! .dropdown-content a{} 
+    的a是子選擇器
+    點號之後是副選擇器
+    本句的意思就是
+    所有.dropdown副選擇器內的a子選擇器>
+<! ---------CSS模板開始---------start--->
+<style>
+
+    li{color: yellowgreen;
+        background-color: black;
+        font-size: 100px;
+        }
+    li a, dropbtn{
+        display: inline-block
+    }
+    li.dropdown{
+        display: inline-block
+    }
+    .dropdown-content{
+        background-color: yellow;
+        display: none
+    }
+    .dropdown-content a {
+        display: block;
+        font-size: 32px
+    }
+    .dropdown:hover .dropdown-content{
+        display: block
+    }
+    body{
+        background-image:url(line3.JPG);
+        background-size:cover;
+        background-repeat : no-repeat;
+    }
+
+    
+</style>
+<! ---------CSS模板結束---------over---->
+<! 階層li大於dr=div大於a
+我-老師  檔案名稱轉換
+(1)    li = li,dropdown
+    螢幕inline-block
+    hover螢幕:
+(1-1)  dr = a.dropbtn
+    螢幕inline-block
+    hover螢幕:
+(1-2)  div= div.dropdown-content
+    螢幕none
+     hover螢幕:
+(1-2-1)a  = a
+    螢幕inline-block
+    hover螢幕:block
+>
+
+<body>
+    <li class="dropdown">
+        <a class="dropbtn">不要移過來  
+        </a>
+        <div class="dropdown-content">
+            <a href="line1.JPG">不要按我</a>
+            <a href="line2.JPG">這裡是江南區</a>
+            <a href="line3.JPG">這裡是春川</a>
+        </div>
+    </li>    
+</body>
+
+</html>

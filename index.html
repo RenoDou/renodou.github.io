@@ -12,111 +12,126 @@
     </script>
 <!--jQ-->
     
+    
+    
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+       .thumbnail{
+            background-color: black;
+            border-color: black;
+        }
+        .row{
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+        .fd{
+            font-size: 18px;
+        }
+        
+    </style>
+    
 </head>
 
-<style>
-    h3.abc{color: yellow;}
-    .thumbnail{
-
-    }
-    div.row{
-        float: left;
-        margin-top: 20px;
-    }
-</style>
-
 <body>
-<!-- #carousel  下面三塊div div ol是複製p65的carousel-->
-<div id="slideshow" class="carousel slide" data-ride="carousel">
-<! #carousel-img 這邊是輪播的圖片 >
-    <div class="carousel-inner" role="listbox">
-       <! #carousel-imgA 輪播的圖片A >
-        <div class="item active"><img src="line1.JPG" alt="">
-             <div class="carousel-caption"><h3 class="abc">江南站</h3></div>
-        </div>
-        <! #carousel-imgAB 輪播的圖片B >
-        <div class="item"><img src="line3.JPG" alt="">
-             <div class="carousel-caption"><h3>江南大道</h3></div>
-        </div>
-        <! #carousel-imgAB 輪播的圖片C >
-        <div class="item" align=center><img src="line2.JPG" alt="">
-             <div class="carousel-caption"><h3>江南大道</h3></div>
-        </div>
-    </div>
-<! #carousel-img end這邊是輪播的圖片 ＥＮＤ>
-<! #carousel-btn這邊是左右按鈕 >
-    <div class="control-btn">
-        <a href="#slideshow" class="left carousel-control" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hiddden="true"></span>
-        </a>
-        <a href="#slideshow" class="right carousel-control" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hiddden="true"></span>
-        </a>
-    </div>
-<! #carousel-btn end這邊是左右按鈕 ＥＮＤ>
-<! #carousel-point 這邊是圓點>
-    <ol class="carousel-indicators">
-        <li data-target="#slideshow" data-slide-to="0"></li>
-        <li data-target="#slideshow" data-slide-to="1"></li>
-        <li data-target="#slideshow" data-slide-to="2"></li>
-        <li data-target="#slideshow" data-slide-to="1"></li>
-        <li data-target="#slideshow" data-slide-to="2"></li>
-    </ol>
-<! #carousel-point 這邊是圓點>
-</div>
-<!-- #carousel end  上面三塊div div ol是複製p65的carousel-->
-    
+<!-- 設計第一層1-3-7-->
+<!-- 設計第二層4-8-->
 
-<! 這邊是thumbnail格子--------------複製P49>
 <div class="row">
-<! 第一塊thumbnail>
-    <div class="col-md-4 col-sm-4 col-xs-12">
+     <div class="col-md-1 col-sm-1 col-xs-12"><!--純粹為了想切1-3-1-7格線 -->
         <div class="thumbnail">
-            <img src="line1.JPG" alt="...">
-            <div class="caption">
-                <h3>江南站</h3>
-                <p>江南大叔的地標</p>
-                <p>
-                    <a href="https://docs.google.com/presentation/d/1le6F9iSPLOVAtrZNuHBPumm5PrbJ6a5XtNhp94kGHDY/edit?usp=sharing" class="btn btn-primary" role="button">這個按鈕有玄機唷</a>
-                    <a href="https://drive.google.com/open?id=0B6kESQ5EkqKeSmZSRWRRSVFyUDA" class="btn btn-default" role="button">我把寶藏都藏在這個按鈕裡面了</a>
-                </p>
+            <div class="floating">
             </div>
         </div>
-    </div>
-<! 第一塊thumbnailＥＮＤ>
-<! 第二塊thumbnail>
-    <div class="col-md-4 col-sm-4 col-xs-12">
+    </div><!--純粹為了想切1-3-7格線 -->
+   
+    <div class="col-md-3 col-sm-3 col-xs-12">
         <div class="thumbnail">
-            <img src="line2.JPG" alt="...">
-            <div class="caption">
-                <h3>江南大道</h3>
-                <p>東方香榭麗舍大道</p>
-                <p>
-                    <a href="#" class="btn btn-primary" role="button">haha</a>
-                    <a href="#" class="btn btn-default" role="button">Button</a>
-                </p>
-            </div>
+            <img src="head_c.png" alt="...">
+                <h1 align=center>RoYu, Do</h1>
+                <h5 class="fd" align=center>Front-end Develope</h5>
+                <h5 class="fd" align=center>Interpreter<br> Chinese-French</h5>
         </div>
     </div>
-<! 第二塊thumbnailＥＮＤ>
-<! 第三塊thumbnail>
-    <div class="col-md-4 col-sm-4 col-xs-12">
-        <div class="thumbnail">
-            <img src="line3.JPG" alt="...">
-            <div class="caption">
-                <h3>九曲瀑布</h3>
-                <p>負10度的冰凍瀑布</p>
-                <p>
-                    <a href="#" class="btn btn-primary" role="button">Button</a>
-                    <a href="#" class="btn btn-default" role="button">Button</a>
-                </p>
-            </div>
-        </div>
-    </div>
-<! 第三塊thumbnailＥＮＤ>
-</div>
-<! 這邊是thumbnail格子 ＥＮＤ------------------->
 
-    
+    <div class="col-md-5 col-sm-5 col-xs-12">
+      <div class="thumbnail">
+        <div class="" align="left">
+            <span style="text-decoration:line-through;"><h3>+44 20 3217 5371</h3></span>
+            <h3>+886 932 173 571 </h3>
+            <h3>ya9911a5zzcc@gmail.com </h3>
+            <span style="text-decoration:line-through;"><h3>3F, 32, Haymarket,<br>StJames, SW1Y 4EX,<br>London, United Kindom </h3>
+        </div>
+      </div>
+    </div>
+</div><!--row-->
+     
+<div class="row">
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="thumbnail">
+                <h2 align=right>ABOUT ME</h2>
+<h4  align=right>Now I'm a backpacker traveling this world for 1 years! if you want to contact me, please send me g-mail!</h4>
+                     
+                <h2 align=right>SKillS</h2>
+<h4  align=right>
+Python, PyQt, JavaScript,<br>C, C++, Java,
+</h4>
+<h4  align=right>And maybe cook some Taiwanese food!
+</h4>
+                
+                <h2 align=right>LANGUAGES</h2>
+<h4 align="center">
+<img width="100px" src="taiwan_flag.png" alt="...">
+<img width="100px" src="france_flag.png" alt="...">
+<img width="100px" src="spain_flag.png" alt="...">
+<img width="100px" src="south_korea_flag.png" alt="...">
+<img width="100px" src="united_kingdom_flag.png" alt="...">
+  <br>                       
+</h4>
+                
+        </div>
+    </div>
+
+    <div class="col-md-7 col-sm-7 col-xs-12">
+        <div class="thumbnail">
+                <h1 align=left>Experiences</h1>
+                <h4 class="content">
+。Instructor ,Captain<br>
+Special Warfare Training Center, Taiwan Army<br>
+2015-2016 Taichung,Taiwan<br></h4>
+<h4>
+Train SF officers from the world.<br>
+Be responsible in Special Forces intelligence, Coopreated with USA Special Forces, Jordan Special Forces(Arabic), Bukina Faso Special Forces(French).</h4>
+<h4>
+。Defense Attaché Reserve Office(French),First Lieutenant<br>
+National Defense University Languages Center
+<br>
+2013-2015 Taipei, Taiwan
+                </h4>
+                <h4>
+。First Lieutenant<br>
+Special Warfare Training Center, Taiwan Army<br>
+2011-2013 Taichung,Taiwan<br>
+                </h4>
+                
+                <h1 align=left>Education</h1>
+<h4>。National ChungChi University<br>
+Computer Science, Master of Science (M.S.)</h4>
+<h4>。National Defense University, Taiwan<br>
+Electrical Engineering, Bachelor of Engineering (B.E.)</h4>
+                
+                <h1 align=left>Others..</h1>
+<h4>。Love to play soccer (and Futsal) team. Mostly Futsal.
+<br>。Try new things, learning new skills are both interested me.<br>
+。Passionated about Language exchange! Frence, Spanish, Korean, English, Cantonese and any languages if you want!
+</h4>
+<a href="hey.html" class="btn btn-primary" role="button">touch me</a>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>

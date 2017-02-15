@@ -8,22 +8,106 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!--jQ-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
-
     </script>
 <!--jQ-->
+
+<!--google map-->
+    <script type="text/javascript">
+        
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 16,
+    center: {lat: 25.0203, lng: 121.5416}
+  });
+
+  var goldStar = {
+    path: 'M 0,-110 30,-25 120,-25 50,30 75,115 0,65 -75,115 -50,30 -120,-25 -30,-25 z',
     
+    fillColor: 'black',
+    fillOpacity: 0.3,
+    scale: 0.3,
+    strokeColor: 'gold',
+    strokeWeight: 3.5
+  };
+
+  var marker = new google.maps.Marker({
+    position: map.getCenter(),
+    icon: goldStar,
+    map: map
+  });
+}
+/*不要偷看ＸＤＤ 一看就露餡了
+
+台大體育館center: {lat: 25.021918, lng:121.535282
+
+有關標記：
+https://developers.google.com/maps/documentation/ios-sdk/marker?hl=zh-tw
+有關標記的符號： (星星要對到座標的話 全部項path都要-125,-5)
+https://developers.google.com/maps/documentation/javascript/symbols?hl=zh-tw
+}*/
+        
+/* 取得位置
+https://dotblogs.com.tw/phoenix7765/2012/10/24/78841
+
+        var initialLocation;
+var taipei = new google.maps.LatLng(25.09108, 121.5598);
+var browserSupportFlag =  new Boolean();
+
+function initialize() {
+  var myOptions = {
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+  
+  // Try W3C Geolocation (Preferred)
+  if(navigator.geolocation) {
+    browserSupportFlag = true;
+    navigator.geolocation.getCurrentPosition(function(position) {
+      initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+      map.setCenter(initialLocation);
+    }, function() {
+      handleNoGeolocation(browserSupportFlag);
+    });
+  }
+  // Browser doesn't support Geolocation
+  else {
+    browserSupportFlag = false;
+    handleNoGeolocation(browserSupportFlag);
+  }
+  
+  function handleNoGeolocation(errorFlag) {
+    if (errorFlag == true) {
+      alert("地圖定位失敗");
+    } else {
+      alert("您的瀏覽器不支援定位服務");
+    }
+	initialLocation = taipei;
+    map.setCenter(initialLocation);
+  }
+}
+*/
+    </script>
+    
+<!--拜託不要偷我的key-->
+     <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQc91DsMPRyni9JN5hsasfh2wS-x02ih8&callback=initMap">
+    </script>
+<!--google map結束 -->
     <style type="text/css">
         body{
             background-color: black;
-            color: white;
+            color: gainsboro;
         }
        .thumbnail{
             background-color: black;
             border-color: black;
-            
+        }
+        h1,h2{
+            color:chartreuse;
         }
         .row{
-            margin: 30px;
+            
         }
         .fd{
             font-size: 20px;
@@ -31,8 +115,21 @@
         .info{
             margin-top: 40px;          
         }
-        body,html{ height: 100%; margin: 0; padding: 0; }
+        li.title{
+            color: white;
+            font-size: 18px;
+            font-weight:bold;
+        }
+        ul{
+            font-size: 16px;
+        }
+        .flag{
+            float: left;
+            padding: inherit;
+        }
+        body,html{ height: 100%; margin: 30px; padding: 20px; }
         #map{ height: 100%; }
+
     </style>
     
 </head>
@@ -46,9 +143,10 @@
     <div  class="col-xs-8 col-sm-4 col-md-4">
         <div class="thumbnail">
             <img src="head_c.png" alt="...">
-                <h1 align=center>RoYu, Do</h1>
+                <h1 spab style="color:blue;" align="center">RoYu, Do</h1>
                 <h5 class="fd" align=center>Front-end Developer</h5>
-                <h5 class="fd" align=center>Interpreter<br> French-Chinses(tr)</h5>
+                <h5 class="fd" align=center>Interpreter<br>French-Mandarin(TW)</h5>
+                <h5  class="fd" align=center>Backpacker<br>Traveling aroung the world</h5>
         </div>
     </div>
     
@@ -59,10 +157,8 @@
             <h3>+886 932 173 571 </h3>
             <h3>ya9911a5zzcc@gmail.com </h3>
             <span style="text-decoration:line-through;"><h4>3F, 32, Haymarket,<br>StJames, SW1Y 4EX,<br>London,     United Kindom </h4>
-                    <a href="h" class="btn btn-primary" role="button">where am I now?</a>
           </span>
-        </div>
-    
+        </div>    
      </div>
     </div>
 </div><!--row-->
@@ -88,74 +184,63 @@ Python, PyQt,
 
 <h4>And maybe cook some Taiwanese food!
 </h4>
-                
-                <h2>LANGUAGEs</h2>
-<h4 align="center">
-<img width="100px" src="taiwan_flag.png" alt="...">
-<img width="100px" src="france_flag.png" alt="...">
+              
+<h2>LANGUAGEs</h2>
+    <div align="center" class="flag"><img width="100px" src="taiwan_flag.png" alt="..."><br>Mandarins</div>
+
+    <div align="center" class="flag"><img width="100px" src="france_flag.png" alt="..."><br>French</div>
+
+    <div  align="center" class="flag"><img width="100px" src="united_kingdom_flag.png" alt="..."><br>English</div>
+ 
 <!--
 <img width="100px" src="spain_flag.png" alt="...">
 <img width="100px" src="south_korea_flag.png" alt="...">
 -->
- <img width="100px" src="united_kingdom_flag.png" alt="...">
-  <br>                       
-</h4>
                 
         </div>
     </div>
 
     <div class="col-xs-12 col-sm-7 col-md-7">
         <div class="thumbnail">
-                <h1 align=left>Experiences</h1>
-                <h4 class="content">
-。Instructor ,Captain<br>
+<ul>
+   
+    <h2>Experiences</h2>
+<li class="title">Instructor, Captain</li>
 Special Warfare Training Center, Taiwan Army<br>
-2015-2016 Taichung,Taiwan<br></h4>
-<h4>
-Train SF officers from the world.<br>
-Be responsible in Special Forces intelligence, Coopreated with USA Special Forces, Jordan Special Forces(Arabic), Bukina Faso Special Forces(French).</h4>
-<h4>
-。Defense Attaché Reserve Office(French),First Lieutenant<br>
+2015-2016 Taichung,Taiwan<br>
+Train SF officers from the world.
+Be responsible in Special Forces intelligence, Coopreated with USA Special Forces, Jordan Special Forces(Arabic), Bukina Faso Special Forces(French).
+<li class="title">
+Defense Attaché Reserve Office(French), First Lieutenant</li>
 National Defense University Languages Center
 <br>
 2013-2015 Taipei, Taiwan
-                </h4>
-                <h4>
-。First Lieutenant<br>
+                <li class="title">
+Ordnance Officer, First Lieutenant</li>
 Special Warfare Training Center, Taiwan Army<br>
 2011-2013 Taichung,Taiwan<br>
-                </h4>
+</ul>
                 
-                <h1 align=left>Education</h1>
-<h4>。National ChungChi University<br>
-Computer Science, Master of Science (M.S.)</h4>
-<h4>。National Defense University, Taiwan<br>
-Electrical Engineering, Bachelor of Engineering (B.E.)</h4>
+<ul><h2>Education</h2>
+    <li class="title">National ChungChi University</li>
+    Computer Science, Master of Science (M.S.)
+    <li class="title">National Defense University, Taiwan</li>
+    Electrical Engineering, Bachelor of Engineering (B.E.)
+</ul>
                 
-                <h1 align=left>Others..</h1>
-<h4>。Love to play soccer (and Futsal) team. Mostly Futsal.
-<br>。Try new things, learning new skills are both interested me.<br>
-。Passionated about Language exchange! Frence, English, maybe Spanish or Korean and any languages if you want!
-</h4>
+<ul><h2>Others..</h2>
+    <li>Love to play soccer (and Futsal) team. Mostly Futsal.</li>
+    <li>Try new things, learning new skills are both interested me.</li>
+    <li>Passionated about Language exchange! Frence, English, maybe Spanish or Korean and any languages if you want!
+</li>
 <a href="hey.html" class="btn btn-primary" role="button">touch me</a>
+</ul>
+       
         </div>
     </div>
 </div>
 
-   
-    <div id="map"></div>
-    <script type="text/javascript">
-var map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 25.033, lng: 121.644},
-    zoom: 8
-  });
-}
-    </script>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCfNxd6gXwUDxmXZEHPQD4EgDdkHdkPPk&callback=initMap">
-    </script>
+        <div id="map"></div>
 
 </body>
 </html>

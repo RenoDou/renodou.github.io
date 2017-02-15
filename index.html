@@ -16,7 +16,7 @@
         
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 16,
+    zoom: 13,
     center: {lat: 25.0203, lng: 121.5416}
   });
 
@@ -27,7 +27,7 @@ function initMap() {
     fillOpacity: 0.3,
     scale: 0.3,
     strokeColor: 'gold',
-    strokeWeight: 3.5
+    strokeWeight: 2.5
   };
 
   var marker = new google.maps.Marker({
@@ -86,14 +86,30 @@ function initialize() {
     map.setCenter(initialLocation);
   }
 }
-*/
+*/            
     </script>
+    
     
 <!--拜託不要偷我的key-->
      <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQc91DsMPRyni9JN5hsasfh2wS-x02ih8&callback=initMap">
     </script>
 <!--google map結束 -->
+
+<!--抓時間http://www.wibibi.com/info.php?tid=176-->
+<script language="JavaScript">
+function ShowTime(){
+　document.getElementById('showbox').innerHTML = new Date();
+　setTimeout('ShowTime()',1000);
+}
+</script>
+<!--抓時間http://www.wibibi.com/info.php?tid=176結束
+記得貼這段到後面<body onload="ShowTime()">
+<div id="showbox"></div>
+</body>
+  
+  -->
+   
     <style type="text/css">
         body{
             background-color: black;
@@ -101,7 +117,7 @@ function initialize() {
         }
        .thumbnail{
             background-color: black;
-            border-color: black;
+            border-color:black;
         }
         h1,h2{
             color:chartreuse;
@@ -109,16 +125,24 @@ function initialize() {
         .row{
             
         }
-        .fd{
-            font-size: 20px;
+        .jobTitle{
+            font-size: 18px;
+            font-weight: bold;
+            color: yellow;
         }
-        .info{
-            margin-top: 40px;          
-        }
+        .
+/*        .row{
+            position:absolute;
+            bottom: 0px;
+        } */
         li.title{
             color: white;
             font-size: 18px;
             font-weight:bold;
+            list-style-type:square;
+        }
+        li.prosTitle{
+            list-style-type:none;
         }
         ul{
             font-size: 16px;
@@ -128,7 +152,9 @@ function initialize() {
             padding: inherit;
         }
         body,html{ height: 100%; margin: 30px; padding: 20px; }
-        #map{ height: 100%; }
+        #map{ height: 100%;
+        }
+        ol.lastUpdate{margin-bottom: 70px;}
 
     </style>
     
@@ -138,21 +164,20 @@ function initialize() {
 <!-- 設計第一層1-3-7-->
 <!-- 設計第二層4-8-->
 
-<div class="row">
-   
-    <div  class="col-xs-8 col-sm-4 col-md-4">
+<div class="row"><!--row1-->
+    <div  class="col-xs-12 col-sm-5 col-md-5">
         <div class="thumbnail">
             <img src="head_c.png" alt="...">
                 <h1 spab style="color:blue;" align="center">RoYu, Do</h1>
-                <h5 class="fd" align=center>Front-end Developer</h5>
-                <h5 class="fd" align=center>Interpreter<br>French-Mandarin(TW)</h5>
-                <h5  class="fd" align=center>Backpacker<br>Traveling aroung the world</h5>
+            <div class="jobTitle" align=center>Front-end Developer</div>
+            <div class="jobTitle" align=center>Freelance Translator French-Mandarin</div>
         </div>
     </div>
-    
+
     <div class="col-xs-12 col-sm-7 col-md-7">
     <div class="info"> 
       <div  class="thumbnail">
+           <h2>Contact Info</h2>
             <span style="text-decoration:line-through;"><h3>+44 20 3217 5371</h3></span>
             <h3>+886 932 173 571 </h3>
             <h3>ya9911a5zzcc@gmail.com </h3>
@@ -161,9 +186,10 @@ function initialize() {
         </div>    
      </div>
     </div>
-</div><!--row-->
+</div><!--row1-->
+    
      
-<div class="row">
+<div class="row"><!--row2-->
     <div class="col-xs-12 col-sm-4 col-md-4">
         <div class="thumbnail">
                 <h2>ABOUT ME</h2>
@@ -174,9 +200,9 @@ function initialize() {
 </h4>
 
                      
-                <h2>SKILLs</h2>
+<h2>SKILLs</h2>
 <h4>
-Python, PyQt,
+Python, some PyQt,
 <br>C, C++, C♯, Java,
 <br>JavaScript (HTML5, CSS3, RWD, jQuery..etc)
 <br>PHP (MySQL, PDO..etc)
@@ -186,21 +212,20 @@ Python, PyQt,
 </h4>
               
 <h2>LANGUAGEs</h2>
+     <!--懶得overflow了 有空再寫-->
     <div align="center" class="flag"><img width="100px" src="taiwan_flag.png" alt="..."><br>Mandarins</div>
 
     <div align="center" class="flag"><img width="100px" src="france_flag.png" alt="..."><br>French</div>
 
     <div  align="center" class="flag"><img width="100px" src="united_kingdom_flag.png" alt="..."><br>English</div>
- 
-<!--
+<!--還是別吹噓西文跟韓文吧..
 <img width="100px" src="spain_flag.png" alt="...">
 <img width="100px" src="south_korea_flag.png" alt="...">
 -->
-                
         </div>
     </div>
 
-    <div class="col-xs-12 col-sm-7 col-md-7">
+    <div class="col-xs-12 col-sm-8 col-md-8">
         <div class="thumbnail">
 <ul>
    
@@ -238,9 +263,18 @@ Special Warfare Training Center, Taiwan Army<br>
        
         </div>
     </div>
-</div>
+</div><!--row2-->
 
-        <div id="map"></div>
-
+    <h2>Where Am I Now?  
+    </h2>
+<!--googlemap-->
+    <div id="map"></div>
+<!--googlemap-->
+   
+<!--時間偷吃步-->
+    <ol align="right" class="lastUpdate">Last Uplate:    <body onload="ShowTime()">
+    <div align="right" id="showbox"></div></ol> 
+<!--時間偷吃步-->
+</body>
 </body>
 </html>

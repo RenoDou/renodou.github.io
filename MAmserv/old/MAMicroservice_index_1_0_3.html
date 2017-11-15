@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NCCU | MicroService: MyAccount</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 匯入bootstrap-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- 匯入jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 匯入bootstrap javascript-->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+       body{ 
+           padding: 60px;
+           position:relative;
+       }
+</style>
+
+<body data-target="#navbar-spy" data-spy="scroll">
+    <nav class="navbar-fixed-top nav navbar-default" id="navbar-spy">
+        <a class="navbar-brand" href="#">
+            <img src="logo_4.png" width="20" height="20" class="" alt="">
+        </a>
+      
+       <!--縮放的欄位-->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a data-toggle="tab" href="#home">HOME</a></li>
+                <li><a data-toggle="tab" href="#team">TEAM</a></li>
+                <li><a data-toggle="tab" href="#contact">CONTACT</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-log-in"></span>
+                        Log in
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Sign Up</a>
+                </li>
+            </ul>
+        </div><!--縮放的欄位END-->
+    </nav>
+    <div id="home">
+        <ul>
+            <li class="logo">--MyAccount--</li>
+            <li>MicroService 1.1.0</li>
+        </ul>
+    </div>
+    <div id="team">
+        <ul>
+           <h1>OUR TEAM</h1>
+           <h1>CCC</h1>
+           <h1>TEAM</h1>
+           <h1>TEAM</h1>
+           <h1>TEAM</h1>
+            <li class="logo">--MyAccount--</li>
+            <li>MicroService 1.1.0</li>
+        </ul>
+    </div>
+    <div id="CONTACT">
+        <ul>
+            <h1>CONTACT US</h1>
+            <h1>addr:</h1>
+            <h1>tel:</h1>
+            <h1>Facebook</h1>
+            <li class="logo">--MyAccount--</li>
+            <li>MicroService 1.1.0</li>
+        </ul>
+    </div>
+    <img src="logo_3.png" alt="">
+    
+</body>
+</html>

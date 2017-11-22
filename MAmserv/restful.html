@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title></title>
+<meta name="" content="">
+</head>
+<script type="text/javascript" language="javascript">
+	function GETAction() {
+	    var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		        var myObj = JSON.parse(this.responseText);
+		        document.getElementById("demo").innerHTML = myObj.origin;
+		        alert(myObj.origin);
+		    }
+		};
+		xmlhttp.open("GET", "https://httpbin.org/ip", true);
+		xmlhttp.send();
+	}
+	
+</script>
+<body>
+
+<p id="demo"></p>
+
+<button type="submit" onclick="GETAction()">GET</button>
+
+</body>
+</html>

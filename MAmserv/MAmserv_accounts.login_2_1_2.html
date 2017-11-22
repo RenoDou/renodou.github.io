@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NCCU | MicroService: MyAccount</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- 匯入jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- 匯入bootstrap javascript-->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- log in with fbfb -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    -->
+    
+<script>
+        //POST and GET
+        //GET  
+	function IDAction(ID) {
+	    var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		        var myObj = JSON.parse(this.responseText);
+		        document.getElementById("demo").innerHTML = myObj.origin;
+		        alert(myObj.origin);
+		    }
+		};
+		xmlhttp.open("GET", "https://httpbin.org/ip", true);
+		xmlhttp.send(); 
+        alert(pid);
+	} 
+    //POST
+	/*function SignAction(pid){
+		var http = new XMLHttpRequest();
+		var url = "http://52.192.250.66:8080/v1/accounts/accounts.login";
+		var params = "pid" + pid;
+		http.open("POST", url, true);
+		//http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		http.onreadystatechange = function() {//Call a function when the state changes.
+    		if(http.readyState == 4) {
+        		alert(http.responseText);
+    		}
+		}
+		http.send(params);
+	}*/
+        //POST and GET --end--
+    
+//get text box value 參考STackoverflow
+    function grabValue(){
+    var userPass = document.getElementById('pwd');
+    var userName = document.getElementById('user');
+    alert(userPass.value);
+    alert(userName.value);
+    
+    var http = new XMLHttpRequest();
+        
+    var url="http://52.192.250.66:8080/v1/accounts/accounts.login";
+    http.open("POST", url, true);
+    http.responseType = 'text';    
+    http.setRequestHeader("Content-type", "application/json");
+    var params={"email":"test@yopmail.com","password":"1234"};
+    
+    //http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        http.onreadystatechange = function() {//Call a function when the state changes.
+        if (http.readyState == 4){    
+        
+        alert(http.getAllResponseHeaders());
+            //var json = JSON.parse(http.responseText);
+            //alert(json);
+            
+        }}
+    http.send(JSON.stringify(params));
+    }
+    
+    </script>
+    
+</head>
+
+<style>
+    /* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: orange;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {
+    float: left;
+    width: 40%;
+}
+.emptybtn{width: 10%;}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+#section6 {padding-top:30px;height:auto ;color: #fff; background-color:#000000;
+             padding-bottom: 20px;text-align:center}
+.container{padding-top: 50px;}
+</style>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+               <img style="max-width:100px; margin-top: -10px;"
+                    src="logo_1.png" width="40" height="40">
+            </a>
+          <a class="navbar-brand" href="#">NCCU | MicroService</a>
+        </div>
+        <div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="MAMicroservice_index_1_2_3.html">HOME</a></li>        
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+<!--form-->
+<form action="/action_page.php" style="border:1px solid #ccc">
+  <div class="container">
+   
+    <h1 class="kpx_authTitle">Login or 
+    <a href="MAmserv_accounts.signup_1_0_1.html">Sign up</a></h1>
+<!--ＦＢ登入-->
+        <div class="row kpx_row-sm-offset-0 kpx_socialButtons">
+          <div class="col-xs-4 col-sm-4">
+            <a href="#" class="btn btn-lg btn-block kpx_btn-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
+              <i class="fa fa-facebook fa-2x"></i>
+              <span class=>Facebook</span>
+            </a>
+          </div>
+          <div class="col-xs-4 col-sm-4">
+            <a href="#" class="btn btn-lg btn-block kpx_btn-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+              <i class="fa fa-twitter fa-2x"></i>
+              <span class=>Twitter</span>
+            </a>
+          </div>  
+          <div class="col-xs-4 col-sm-4">
+            <a href="#" class="btn btn-lg btn-block kpx_btn-google-plus" data-toggle="tooltip" data-placement="top" title="Google Plus">
+              <i class="fa fa-google-plus fa-2x"></i>
+              <span class=>Google+</span>
+            </a>
+          </div>  
+    </div><br>
+<!--正常登入-->
+    <label><b>Email</b></label>
+    <input id="user" type="text" placeholder="Enter Email" name="email" required>
+
+    <label><b>Password</b></label>
+    <input id="pwd" type="password" placeholder="Enter Password" name="psw" required>
+
+    <input type="checkbox" checked="checked"> Remember me
+    
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <div class="Last Name">
+      <button type="button" class="cancelbtn">Cancel</button> 
+      <!--      <button type="submit" class="signupbtn">Sign Up</button> -->
+<!--Sign Up btn-->  
+      <INPUT TYPE="button" onClick="grabValue()" value="LOG IN" ><a href="MAmserv_accounts_2_0_3(account%20name%20get%E5%AE%8C%E6%88%90).html"></a> </INPUT>
+    </div>
+  </div>
+</form>
+
+<!--footer區塊-->
+    <div  id="section6" class="container-fluid">
+        <ul>Address : Computer Science,NO.64,Sec.2,ZhiNan Rd.,Wenshan District,Taipei City 11605,Taiwan (R.O.C)</ul>
+        <ul>Tel : (02) 29387242 | Fax : (02) 22341494</ul>
+        <ul>Copyright 2017 © Computer Science</ul>
+    </div>
+<!--scripts-->
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NCCU | MicroService: MyAccount</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 匯入bootstrap-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- 匯入jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- 匯入bootstrap javascript-->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- log in with fbfb -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+</head>
+
+<style>
+    body{
+        position:relative;
+        background-image: url(bg_3.png);
+        background-position:;
+        background-size:cover;
+        background-attachment: fixed;
+    }
+    h1{
+       color:#ffff80;
+    }
+    .member-name{
+        padding-top: 10px;
+        color: greenyellow;font-size: 20px;font-weight: 500;
+    }
+    .member-title{padding-bottom: 10px;}
+    .member-block{padding: 30px;}
+    .media{padding: 50px;}
+    
+  #section1{padding-top:70px;height:auto ;color:#fff; background-color:#;
+             padding-bottom: 30px;text-align:center}
+    .btn-home{padding-bottom:20px;}
+    .btn-home-block{background-color:#58A6E9;color: #ffffff;
+            font-size: 16px;font-weight: bolder;
+            box-shadow:0px 0px 50px rgba(0%,0%,100%,1);}
+    .btn-home-block:hover {background-color:rgba(35%,65%,90%,0.3);color:#fff;}    
+    .btn-home-block a{color:#ffffff;}
+    .login{background-color:rgba(35%,65%,90%,0)}
+  #section2 {padding-top:50px;height:auto ;color: #fff; background-color:#;
+             padding-bottom: 30px;text-align:center;
+             padding-left: 70px;padding-right:70px;}
+    #table-container{background: #000; opacity:1;
+                    padding-left: 30px;padding-right:30px;}
+    th{text-align:center;}
+    td{text-align:;vertical-align: middle;}
+    .sell {background-color: #2196F3; width: 100px;height:auto;} /* Blue */
+    .sell:hover {background: #0b7dda; width: 100px;height:auto;}
+    .buy {background-color: #f44336; width: 100px;height:auto;} /* Red */ 
+    .buy:hover {background: #da190b; width: 100px;height:auto;}
+    /*以下三個備用顏色*/
+    .default {background-color: #e7e7e7; color: black;} /* Gray*/
+    .default:hover {background: #ddd;}
+    .success {background-color: #4CAF50;} /* Green*/
+    .success:hover {background-color: #46a049;}
+    .warning {background-color: #ff9800;} /* Orange*/
+    .warning:hover {background: #e68a00;}
+  #section3 {padding-top:50px;height:auto ;color: #fff; background-color:#;
+             padding-bottom: 30px;text-align:center}
+  #section4 {padding-top:30px;height:auto ;color: #fff; background-color:#;
+             padding-bottom: 30px;text-align:center}
+  #section5 {padding-top:50px;height:auto ;color: #fff; background-color:#;
+             padding-bottom: 30px;text-align:center}
+  #section6 {padding-top:30px;height:auto ;color: #fff; background-color:#000000;
+             padding-bottom: 20px;text-align:center}
+    
+    /*下拉式備用
+  #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
+  #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
+    */    
+</style>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">
+               <img style="max-width:100px; margin-top: -10px;"
+                    src="logo_1.png" width="40" height="40">
+            </a>
+          <a class="navbar-brand" href="#">NCCU | MicroService</a>
+        </div>
+        <div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="#section1">HOME</a></li>
+<!--
+              <li><a href="#section2">EXCHANGE</a></li>
+              <li><a href="#section3">TEAM</a></li>
+              <li><a href="#section4">CONTACT</a></li>
+              <li><a href="#section5">PARTNERS</a></li> -->            
+              <!--dropdown menu
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#section41">Section 4-1</a></li>
+                  <li><a href="#section42">Section 4-2</a></li>
+                </ul>
+              </li>-->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-log-in"></span>
+                        Log In
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Sign Up</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+<!--EXCHANGE區塊-->
+<!--EXCHANGE區塊-->
+        <div id="section2" class="container-fluid">
+           <div id="table-container">
+            <h1>License</h1>
+            <p>Buy your License here, Easy, Simple, Convinience.</p>
+            <table class="table table-condensed">
+              <caption></caption>
+              <thead>
+                <tr>
+                  <th>PRODUCT</th>
+                  <th>PRICE</th>
+                  <th>Expired date</th>
+                  <th>key</th>
+                  <th>status</th>
+                  <th>account id and time xxx</th>
+                  <th>BUY/SELL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="vertical-align:middle;">Win10</td>
+                  <td style="vertical-align:middle;">299$</td>
+                  <td style="vertical-align:middle;">2020/1/1</td>
+                  <td style="vertical-align:middle;">a</td>
+                  <td style="vertical-align:middle;">avaible</td>
+                  <td style="vertical-align:middle;">---</td>
+                  <td>
+                   <button class="btn buy">
+                       <a href="MAmserv_purchase_1_0_0.html" style="color:#FFF">BUY</a>
+                   </button>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td style="vertical-align:middle;">Mac Sierra</td>
+                  <td style="vertical-align:middle;">300$</td>
+                  <td style="vertical-align:middle;">2020/1/1</td>
+                  <td style="vertical-align:middle;">b</td>
+                  <td style="vertical-align:middle;">avaible</td>
+                  <td style="vertical-align:middle;">---</td>
+                  <td>
+                   <button class="btn buy">
+                       <a href="MAmserv_purchase_1_0_0.html" style="color:#FFF">BUY</a>
+                   </button>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td style="vertical-align:middle;">Parrelle desktop</td>
+                  <td style="vertical-align:middle;">60$</td>
+                  <td style="vertical-align:middle;">2020/1/1</td>
+                  <td style="vertical-align:middle;">c</td>
+                  <td style="vertical-align:middle;">avaible</td>
+                  <td style="vertical-align:middle;">---</td>
+                  <td>
+                   <button class="btn buy">
+                       <a href="MAmserv_purchase_1_0_0.html" style="color:#FFF">BUY</a>
+                   </button>
+
+                  </td>
+                </tr>
+                <td  style="text-align:; vertical-align:middle; font-size: 24px;">
+                    <a href="MAmserv_purchse_1_0_0.html" style="color:#FFF">...MORE</a>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tbody>
+            </table>
+           </div>
+    </div>
+<!--footer區塊-->
+    <div  id="section6" class="container-fluid">
+        <ul>Address : Computer Science,NO.64,Sec.2,ZhiNan Rd.,Wenshan District,Taipei City 11605,Taiwan (R.O.C)</ul>
+        <ul>Tel : (02) 29387242 | Fax : (02) 22341494</ul>
+        <ul>Copyright 2017 © Computer Science</ul>
+    </div>
+        
+    <!--scripts-->
+    <!--Smooth Scrolling, code from css-trick.com-->
+    <script>
+     // Select all links with hashes
+    $('a[href*="#"]')
+      // Remove links that don't actually link to anything
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function(event) {
+        // On-page links
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+          && 
+          location.hostname == this.hostname
+        ) {
+          // Figure out element to scroll to
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          // Does a scroll target exist?
+          if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000, function() {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) { // Checking if the target was focused
+                return false;
+              } else {
+                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              };
+            });
+          }
+        }
+      });
+    </script><!--Smooth Scrolling-->
+</body>
+</html>

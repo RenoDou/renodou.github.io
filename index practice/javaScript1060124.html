@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<!--bootstrape-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- 以下ch09 p40----------------------------------- -->
+<script type="text/javascript">
+    function check() {
+        if (reg.myname.value == "") {
+            alert("未輸入姓名");
+        }
+        else reg.submit();
+    }
+</script>
+<!-- 以上ch09 p40----------------------------------- -->
+    
+</head>
+<!-- 上面是head----------------------------------- -->
+<body>
+
+<!-- 以下ch09 p29----------------------------------- -->
+<select name="products" multiple="multiple">
+  <option value="Value 1"
+    selected="selected">keyboard</option>
+  <option value="Value 2">mouse</option>
+  <option value="Value 3">speakers</option>
+</select>
+<select name="products" multiple="multiple">
+  <option value="Value 1"
+    selected="selected">keyboard</option>
+  <option value="Value 2">mouse</option>
+  <option value="Value 3">speakers</option>
+</select>
+
+<!-- 以下ch09 p33----------------------------------- -->
+<form method="post" action="form.aspx">
+   <fieldset>
+  	<legend>Client Details</legend>
+ 	<input type="text" id="Name">
+ 	<input type="text" id="Phone">
+   </fieldset>
+   <fieldset>
+	<legend>Order Details</legend>
+ 	<input type="text" id="Quantity">
+ 	<textarea cols="40" rows="10" id="Remarks"></textarea>
+   </fieldset>
+</form>
+
+<!-- 以下ch09 p37----------------------------------- -->
+<form enctype="multipart/form-data">
+…
+  <input type="file" name="photo" />
+…
+</form>
+
+
+<!-- 以下ch09 p40----------------------------------- -->
+<form name="reg" method="post" action="form.aspx">
+  姓名<input type="text" name="myname" placeholder="請輸入姓名呵呵" size=30 maxlength=20 value="">
+  <input type="submit" onClick="check()"> <input type="reset">
+</form>
+<!-- 以上ch09 p40----------------------------------- -->
+
+</body>
+</html>
